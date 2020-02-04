@@ -3,14 +3,38 @@
 https://github.com/Team-Code/KA_Offline -->
 <html> 
  <head>
-    <title>Processing.JS inside Webpages: Template</title> 
+    <title>Gushalves' Projects</title> 
 </head>
- <body>
-    <p align="center"> 
-	<!--This draws the Canvas on the webpage -->
-      <canvas id="mycanvas"></canvas> 
-    </p>
- </body>
+   <style>
+      h1{
+         padding: 20px;
+         border-radius: 8px;
+         font-size: 25px;
+         font-family: monospace;
+         color: white;
+         text-align: center;
+      }
+      
+      #icon{
+         position:relative;
+         float:left;
+         left: 740px;
+         width: 70px;
+      }
+      
+      body{
+         background-image: url(img/background.jpg);
+         background-color:rgb(32,32,32);
+      }
+   </style>
+<body>
+   <div class="dashboard">
+      <img id="icon" src="img/rocket.png">
+      <h1>Gushalves' Projects</h1>
+   </div>
+   <h2></h2> 
+   <p></p>
+</body>
  
  <!-- Run all the JavaScript stuff -->
  <!-- Include the processing.js library -->
@@ -21,7 +45,7 @@ https://github.com/Team-Code/KA_Offline -->
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(30);
+        frameRate(60);
         
         // ProgramCodeGoesHere
         fill(255, 255, 0);
