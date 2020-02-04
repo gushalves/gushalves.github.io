@@ -3,7 +3,7 @@
 https://github.com/Team-Code/KA_Offline -->
 <html> 
  <head>
-    <title>Bouncing Ball (gushalves)</title> 
+    <title>Processing.JS inside Webpages: Template</title> 
 </head>
  <body>
     <p align="center"> 
@@ -21,59 +21,18 @@ https://github.com/Team-Code/KA_Offline -->
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(60);
+        frameRate(30);
         
         // ProgramCodeGoesHere
-        var x = 200;
-        var y = 200;
-        var l1 = 110;
-        var l2 = 13;
-        var speedx = 1;
-        var speedy = 1;
-        var acceleration =  0.05;
-        var score = 0;
-        var dRect = function (x, y, l1, l2) {
-            rect ( x, y, l1, l2, 20);
-        };
-        var start = function () {
-            draw = function() {
-                background (127, 204, 255);
-                fill (66, 66, 66);
-                dRect (mouseX, 375, 110, 13);
-                dRect (mouseX, 10, 110, 13);
-                ellipse (x, y, 50, 50);
-                x += speedx;
-                y += speedy;
-                acceleration += 0.01;
-                if (x >= 375) {
-                    speedx = -2;
-                }
-                else if ( x <= 25) {
-                    speedx = 2;
-                }
-                else if ( mouseX <= x && x <= (mouseX + 110) && y >= 350){
-                    speedy = -1 - acceleration;
-                }
-                else if ( mouseX <= x && x <= (mouseX + 110) && y <= 50){
-                    speedy = 1 + acceleration;
-                }
-                else if ( y > 370 || y < 20 ){
-                    noLoop();
-                    fill(0, 255, 43);
-                    dRect ( 140, 134, 122, 51);
-                    fill(5, 48, 92);
-                    textSize(13);
-                    text("Click to try again!", 152, 165);
-                    
-                }
-            };
-            mouseClicked = function () {
-                if ( mouseX >= 140 && mouseX <= 262 && mouseY >= 134 && mouseY <= 185 && y > 370 || y < 20 ){
-                    start();
-                } 
-            };
-        }
-        start();
+        fill(255, 255, 0);
+        ellipse(200, 200, 200, 200);
+        noFill();
+        stroke(0, 0, 0);
+        strokeWeight(2);
+        arc(200, 200, 150, 100, 0, PI);
+        fill(0, 0, 0);
+        ellipse(250, 200, 10, 10);
+        ellipse(153, 200, 10, 10);
     }};
 
     // Get the canvas that Processing-js will use
